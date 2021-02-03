@@ -79,7 +79,7 @@ TRANSLATIONS += translations/zh_CN.ts \
                 translations/tr.ts \
                 translations/es.ts
 
-system("lrelease translations/*.ts")
+system("lrelease-qt5 translations/*.ts")
 
 qm_file.files = translations/*.qm
 qm_file.path = $${PREFIX}/translations/
