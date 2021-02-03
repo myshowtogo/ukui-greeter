@@ -69,6 +69,8 @@ void SessionWindow::addSessionLabels()
     for(int i = 0; i < m_sessionsModel->rowCount(); i++) {
         QString sessionName = m_sessionsModel->index(i, 0).data().toString();
         QString sessionKey = m_sessionsModel->index(i, 0).data(Qt::UserRole).toString();
+        if(sessionKey == "xinit-compat")
+            continue;
         QAction *action = new QAction(QIcon(getSessionIcon(sessionKey)), sessionName, this);
         action->setData(sessionKey);
         addAction(action);

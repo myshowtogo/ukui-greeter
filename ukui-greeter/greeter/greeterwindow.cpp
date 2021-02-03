@@ -695,7 +695,7 @@ void GreeterWindow::showSessionWnd()
     if(!m_sessionWnd){
         m_sessionWnd = new SessionWindow(m_sessionsModel, this);
 
-#if (QT_VERSION >= QT_VERSION_CHECK(5, 7, 0))
+#if (QT_VERSION >= QT_VERSION_CHECK(5, 12, 0))
         m_sessionWnd->setStyleSheet("QMenu::item{padding: 2px 10px 2px 10px;}");
 #else
         m_sessionWnd->setStyleSheet("QMenu::item{padding: 2px 10px 2px 30px;}");
